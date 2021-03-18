@@ -48,7 +48,6 @@ all_option_string = "All of the above"
 prompt = TTY::Prompt.new
 selections = prompt.multi_select("What files would you like to extract? (Use space to select)", [interesting_files, all_option_string].flatten)
 selections = interesting_files if selections.include?(all_option_string)
-puts selections
 
 #
 # Extract the files
