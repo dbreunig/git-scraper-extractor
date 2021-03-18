@@ -1,43 +1,18 @@
-# GitScraperExtractor
+# git-scraper-extractor
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/git_scraper_extractor`. To experiment with that code, run `bin/console` for an interactive prompt.
+`git-scraper-extractor` is a handy tool for your gitscraping repositories.
 
-TODO: Delete this and the text above, and describe your gem
+What is [gitscraping](https://simonwillison.net/2020/Oct/9/git-scraping/)? We'll let Simon Willison, who coined the term, explain:
 
-## Installation
+>The internet is full of interesting data that changes over time. These changes can sometimes be more interesting than the underlying static data—The @nyt_diff Twitter account tracks changes made to New York Times headlines for example, which offers a fascinating insight into that publication’s editorial process.
+>
+>We already have a great tool for efficiently tracking changes to text over time: Git. And GitHub Actions (and other CI systems) make it easy to create a scraper that runs every few minutes, records the current state of a resource and records changes to that resource over time in the commit history.
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'git_scraper_extractor'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install git_scraper_extractor
+`git-scraper-extractor` is a little tool for extracting the multiple versions of a files from your git repository into separate, timestamped files. After your gitscraping repository has been updating a json or csv for awhile, use `git-scraper-extractor` to find each change and output that version into a separate file. Then load those files into the tool of your choice.
 
 ## Usage
 
-TODO: Write usage instructions here
+It's simple. Clone this repo, `cd` into the directory and run:
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/git_scraper_extractor. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/git_scraper_extractor/blob/master/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the GitScraperExtractor project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/git_scraper_extractor/blob/master/CODE_OF_CONDUCT.md).
+`$ bundle install`
+`$ ./git-scraper-extractor /path/to/repo /path/to/output`
