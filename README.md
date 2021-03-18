@@ -15,4 +15,5 @@ What is [gitscraping](https://simonwillison.net/2020/Oct/9/git-scraping/)? We'll
 It's simple. Clone this repo, `cd` into the directory and run:
 
 `$ bundle install`
+
 `$ ./git-scraper-extractor /path/to/repo /path/to/output`
